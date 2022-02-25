@@ -1,20 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import MainHeader from './components/MainHeader';
+import MainBody from './components/MainBody';
+import HomeGraphics from './components/HomeGraphics';
+import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={mainBg.bg}>
+      <View style={estilosHeader.container}>
+        <MainHeader></MainHeader>
+      </View>
+      <View style={styles.container}>
+        <MainBody></MainBody>
+      </View>
     </View>
   );
 }
 
+const mainBg = StyleSheet.create({
+  bg: {
+    backgroundColor: '#D3D3D3',
+    padding: '1rem'
+  }
+})
+
+const estilosHeader = StyleSheet.create({
+  container: {
+    backgroundColor: 'red'
+  }
+});
+
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    marginTop: "1rem"
   },
 });
