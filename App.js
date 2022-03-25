@@ -18,7 +18,7 @@ export default function App() {
 
 const mainBg = StyleSheet.create({
   bg: {
-    backgroundColor: '#D3D3D3',
+    backgroundColor: '#eeeeee',
     padding: '1rem'
   }
 })
