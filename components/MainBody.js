@@ -5,7 +5,7 @@ import MainButtons from "./MainButtons";
 
 const MainBody = ()=>{
   return(
-    <View>
+    <View style={ContaninerGraphics.main}>
       <HomeGraphics></HomeGraphics>
       <MainButtons></MainButtons>
     </View>
@@ -13,7 +13,9 @@ const MainBody = ()=>{
 }
 
 const ContaninerGraphics = StyleSheet.create({
-  
+  main: {
+    height: '100%'
+  }
 })
 
 export default MainBody;

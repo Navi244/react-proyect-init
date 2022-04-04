@@ -12,9 +12,9 @@ const MainButtons = () => {
             titleStyle={{ color: 'black' }}
             buttonStyle={{ borderRadius: 10, backgroundColor: '#FFFFFF', }}
             containerStyle={{shadowOffset:{  width: 4,  height: 4,  },
-            shadowColor: 'black',
-            shadowOpacity: 0.2,
-            borderRadius: 10}}
+              shadowColor: 'black',
+              shadowOpacity: 0.2,
+              borderRadius: 10}}
             title="Enrutamiento"></Button>
         </View>
         <View style={homeButtons.button}>
@@ -22,6 +22,10 @@ const MainButtons = () => {
             color="#841584"
             titleStyle={{ color: 'black' }}
             buttonStyle={{ borderRadius: 10, backgroundColor: '#FFFFFF',  }}
+            containerStyle={{shadowOffset:{  width: 4,  height: 4,  },
+              shadowColor: 'black',
+              shadowOpacity: 0.2,
+              borderRadius: 10}}
             title="Alarma"></Button>
         </View>
       </View>
@@ -31,6 +35,10 @@ const MainButtons = () => {
             color="#841584"
             titleStyle={{ color: 'black' }}
             buttonStyle={{ borderRadius: 10, backgroundColor: '#FFFFFF' }}
+            containerStyle={{shadowOffset:{  width: 4,  height: 4,  },
+              shadowColor: 'black',
+              shadowOpacity: 0.2,
+              borderRadius: 10}}
             title="Luz"></Button>
         </View>
         <View style={homeButtons.button}>
@@ -38,6 +46,10 @@ const MainButtons = () => {
             color="#841584"
             titleStyle={{ color: 'black' }}
             buttonStyle={{ borderRadius: 10, backgroundColor: '#FFFFFF' }}
+            containerStyle={{shadowOffset:{  width: 4,  height: 4,  },
+              shadowColor: 'black',
+              shadowOpacity: 0.2,
+              borderRadius: 10}}
             title="Right button"></Button>
         </View>
       </View>
@@ -47,6 +59,10 @@ const MainButtons = () => {
             color="#841584"
             titleStyle={{ color: 'black' }}
             buttonStyle={{ borderRadius: 10, backgroundColor: '#FFFFFF' }}
+            containerStyle={{shadowOffset:{  width: 4,  height: 4,  },
+              shadowColor: 'black',
+              shadowOpacity: 0.2,
+              borderRadius: 10}}
             title="Amigos"></Button>
         </View>
         <View style={homeButtons.button}>
@@ -54,6 +70,10 @@ const MainButtons = () => {
             color="#841584"
             titleStyle={{ color: 'black' }}
             buttonStyle={{ borderRadius: 10, backgroundColor: '#FFFFFF' }}
+            containerStyle={{shadowOffset:{  width: 4,  height: 4,  },
+              shadowColor: 'black',
+              shadowOpacity: 0.2,
+              borderRadius: 10}}
             title="Entrenamiento"></Button>
         </View>
       </View>
