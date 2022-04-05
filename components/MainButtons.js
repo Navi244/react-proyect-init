@@ -1,8 +1,11 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import {Text, Button} from "react-native-elements"
+import { useNavigation } from '@react-navigation/native';
 
 const MainButtons = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={mainCategories.container}>
       <View style={mainCategoriesButtons.mainButtons}>
@@ -15,7 +18,8 @@ const MainButtons = () => {
               shadowColor: 'black',
               shadowOpacity: 0.2,
               borderRadius: 10}}
-            title="Enrutamiento"></Button>
+            title="Enrutamiento"
+            onPress={()=> navigation.navigate('Routing')}></Button>
         </View>
         <View style={homeButtons.button}>
           <Button
@@ -26,7 +30,8 @@ const MainButtons = () => {
               shadowColor: 'black',
               shadowOpacity: 0.2,
               borderRadius: 10}}
-            title="Alarma"></Button>
+            title="Alarma"
+            onPress={()=> navigation.navigate('Alarm')}></Button>
         </View>
       </View>
       <View style={mainCategoriesButtons.mainButtons}>
