@@ -1,37 +1,18 @@
-import MainHeader from './components/MainHeader';
-import MainBody from './components/MainBody';
-import HomeGraphics from './components/HomeGraphics';
-import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
+import HomeCycling from './pages/HomeCycling';
+import Routes from './pages/Routes'
+import { StyleSheet, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={mainBg.bg}>
-      <View style={estilosHeader.container}>
-        <MainHeader></MainHeader>
-      </View>
-      <View style={styles.container}>
-        <MainBody></MainBody>
-      </View>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeCycling} />
+        <Stack.Screen name="Routing" component={Routes}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const mainBg = StyleSheet.create({
-  bg: {
-    backgroundColor: '#eeeeee',
-    padding: '1rem',
-    height: '100%'
-  }
-})
-
-const estilosHeader = StyleSheet.create({
-  container: {
-    backgroundColor: 'red'
-  }
-});
-
-const styles = StyleSheet.create({
-  container: {
-    marginTop: "1rem"
-  },
-});
