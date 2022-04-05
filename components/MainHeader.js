@@ -1,10 +1,23 @@
 import React from "react";
-import { Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
-const MainHeader = ()=>{
+const MainHeader = ({title})=>{
   return(
-    <Text>Header</Text>
+    <View style={headerStyles.container}>
+      <Text style={headerTitle.title}>{title}</Text>
+    </View>
   )
 };
+
+const headerStyles = StyleSheet.create({
+  container: {display: 'flex', justifyContent: 'flex-end', flexWrap:'nowrap' }
+});
+
+const headerTitle = StyleSheet.create({
+  title: {
+    color: '#fff',
+    flexGrow: 1
+  }
+})
 
 export default MainHeader;

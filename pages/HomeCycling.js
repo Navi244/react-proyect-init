@@ -1,17 +1,12 @@
 
-import React from "react";
-import MainHeader from '../components/MainHeader';
+import React from 'react';
 import MainBody from '../components/MainBody';
-import { StyleSheet, View, Button } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 
 const HomeCycling = ()=>{
   return (
     <View style={mainBg.bg}>
-      <Button title="Enrutamiento"></Button>
-      <View style={estilosHeader.container}>
-        <MainHeader></MainHeader>
-      </View>
       <View style={styles.container}>
         <MainBody></MainBody>
       </View>
