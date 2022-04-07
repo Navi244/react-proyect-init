@@ -1,12 +1,12 @@
 import React from "react";
 import { View, Text } from "react-native-web";
 
-const Light = ()=>{
+const Training = ()=>{
   return(
     <View>
-      <Text>Página de Luz</Text>
+      <Text>Página de Entrenamiento</Text>
     </View>
   )
 }
 
-export default Light;
+export default Training;

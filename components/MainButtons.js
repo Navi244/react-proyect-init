@@ -44,7 +44,8 @@ const MainButtons = () => {
               shadowColor: 'black',
               shadowOpacity: 0.2,
               borderRadius: 10}}
-            title="Luz"></Button>
+            title="Luz"
+            onPress={()=> navigation.navigate('Light')}></Button>
         </View>
         <View style={homeButtons.button}>
           <Button
@@ -55,7 +56,8 @@ const MainButtons = () => {
               shadowColor: 'black',
               shadowOpacity: 0.2,
               borderRadius: 10}}
-            title="Right button"></Button>
+            title="Estadisticas"
+            onPress={()=> navigation.navigate('Statistics')}></Button>
         </View>
       </View>
       <View style={mainCategoriesButtons.mainButtons}>
@@ -68,7 +70,8 @@ const MainButtons = () => {
               shadowColor: 'black',
               shadowOpacity: 0.2,
               borderRadius: 10}}
-            title="Amigos"></Button>
+            title="Amigos"
+            onPress={()=> navigation.navigate('Friends')}></Button>
         </View>
         <View style={homeButtons.button}>
           <Button
@@ -79,7 +82,8 @@ const MainButtons = () => {
               shadowColor: 'black',
               shadowOpacity: 0.2,
               borderRadius: 10}}
-            title="Entrenamiento"></Button>
+            title="Entrenamiento"
+            onPress={()=> navigation.navigate('Training')}></Button>
         </View>
       </View>
     </View>

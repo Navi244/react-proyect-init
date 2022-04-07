@@ -1,12 +1,11 @@
 import React from "react";
 import { View, Text } from "react-native-web";
 
-const Light = ()=>{
+const Friends = ()=>{
   return(
     <View>
-      <Text>Página de Luz</Text>
+      <Text>Pagina de Amigos</Text>
     </View>
   )
 }
-
-export default Light;
+export default Friends;

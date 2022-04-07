@@ -1,12 +1,12 @@
 import React from "react";
 import { View, Text } from "react-native-web";
 
-const Light = ()=>{
+const Statistics = ()=>{
   return(
     <View>
-      <Text>Página de Luz</Text>
+      <Text>Pagina de estadisticas</Text>
     </View>
   )
 }
 
-export default Light;
+export default Statistics;
