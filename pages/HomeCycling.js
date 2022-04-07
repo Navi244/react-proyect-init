@@ -30,7 +30,7 @@ const estilosHeader = StyleSheet.create({
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: "1rem"
+    marginTop: '1rem'
   },
 });
 
