@@ -1,15 +1,13 @@
 import {View, StyleSheet, Text, Pressable} from "react-native";
-const axios = require('axios').default;
+import { alarmActive } from "../request/services";
 
+ async function sendAlarmActive() {
+  try{
+    const response = await alarmActive()
+    console.log(response)
+  }catch(err){
 
-const sendAlarmActive = ()=>{
-  axios.get('http://localhost:3000/alarm/active')
-  .then(({data})=>{
-    console.log(data.alarm.active);
-  })
-  .catch((error)=>{
-    console.log(error);
-  })
+  }
 }
 
 const Alarm = ()=>{

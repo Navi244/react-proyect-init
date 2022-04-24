@@ -1,10 +1,11 @@
 import React from "react";
-import { Text, StyleSheet, SafeAreaView, TextInput, Button } from "react-native-web";
+import { Text, StyleSheet, SafeAreaView, TextInput, Button } from "react-native";
+import { config } from "../config/config";
 const axios = require('axios').default;
 
 
 const makeRequest = ()=>{
-  axios.get("http://localhost:3000/json").then((response)=>{
+  axios.get(config.host + '/json').then((response)=>{
     console.log(response);
   })
   .catch((error)=>{
