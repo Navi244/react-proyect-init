@@ -1,9 +1,9 @@
 import { config } from "../config/config";
 const axios = require('axios').default;
 
-const alarmActive = ()=>{
+const requestService = (endpoint)=>{
   return new Promise((resolve, reject)=>{
-    axios.get(config.host + '/alarm/active')
+    axios.get(config.host + endpoint)
     .then((data)=>{
       console.log(data)
       return data
@@ -15,5 +15,5 @@ const alarmActive = ()=>{
 }
 
 export {
-  alarmActive
+  requestService
 }

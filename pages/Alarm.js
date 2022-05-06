@@ -1,9 +1,10 @@
 import {View, StyleSheet, Text, Pressable} from "react-native";
-import { alarmActive } from "../request/services";
+import { requestService } from "../request/services";
 
  async function sendAlarmActive() {
+   const endpointAlarm = '/alarm/active';
   try{
-    const response = await alarmActive()
+    const response = await requestService(endpointAlarm)
     console.log(response)
   }catch(err){
 

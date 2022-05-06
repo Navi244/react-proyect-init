@@ -8,11 +8,14 @@ import Training from './pages/Training';
 import MainHeader from './components/MainHeader';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
+import BleManager from './config/bleManager/bleManager'
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  
+  const ble = new BleManager();
+  // ble.start({ showAlert: false }).then(() => {
+  //   console.log("Module initialized");
+  // })
   return (
     <NavigationContainer>
       <Stack.Navigator>
