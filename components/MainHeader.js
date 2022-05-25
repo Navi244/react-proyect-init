@@ -10,7 +10,7 @@ const MainHeader = ({title})=>{
 };
 
 const headerStyles = StyleSheet.create({
-  container: {display: 'flex', justifyContent: 'flex-end', flexWrap:'nowrap' }
+  container: {display: 'static' }
 });
 
 const headerTitle = StyleSheet.create({

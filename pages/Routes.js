@@ -13,6 +13,7 @@ const makeRequest = ()=>{
   })
 }
 
+
 const Routes = ()=>{
   return(
     <SafeAreaView>
@@ -45,5 +46,9 @@ const inpunt = StyleSheet.create({
     borderWidth: 1,
     padding: 10
   },
+  map: {
+    width: '50%',
+    height: '50%'
+  }
 });
 export default Routes;

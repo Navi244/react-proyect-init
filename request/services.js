@@ -14,6 +14,20 @@ const requestService = (endpoint)=>{
   });
 }
 
+const loginRequest =(user, password, endpoint)=>{
+  return new Promise((resolve,reject)=>{
+    axios.get(config.host + endpoint)
+    .then((data)=>{
+      resolve();
+      return data
+    })
+    .catch(()=>{
+      return error
+    })
+  });
+}
+
 export {
-  requestService
+  requestService,
+  loginRequest
 }

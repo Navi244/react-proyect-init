@@ -1,3 +1,4 @@
+import Login from './pages/login';
 import HomeCycling from './pages/HomeCycling';
 import Routes from './pages/Routes';
 import Alarm from './pages/Alarm';
@@ -19,12 +20,18 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen name="Login" component={Login} options={{
+          headerTitle:()=> <MainHeader title="Login" />,
+          headerStyle: {backgroundColor: '#f4511e'},
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+          }
+        }}/>
         <Stack.Screen name="Home" component={HomeCycling} options={{
             headerTitle:()=> <MainHeader title="Inicio" />,
             headerStyle: {backgroundColor: '#f4511e'},
             headerTintColor: '#fff',
             headerTitleStyle: {
-              fontWeight: 'bold',
             }
           }}/>
         <Stack.Screen name="Routing" component={Routes} options={{
