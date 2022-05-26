@@ -1,23 +1,25 @@
-import React from "react";
-import { View, TextInput, StyleSheet, Button } from "react-native";
+import React, {useState, useEffect} from "react";
+import { View, TextInput, StyleSheet, Button, Modal, Pressable, Text } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import { loginRequest } from "../request/services";
+import AlertLogin from "../components/AlertLogin";
 
 async function requestLogin(user, password){
   const endpoint = '/login'
   try {
     const response = await loginRequest(user, password, endpoint);
-    console.log(response)
+    return response;
   }catch(err){
     console.log(err)
   }
-
 }
+
 
 const Login = ( )=>{
   const navigation = useNavigation();
-  const [user, useUser] = React.useState('');
-  const [password, usePassword] = React.useState('');
+  const [user, useUser] = useState('');
+  const [password, usePassword] = useState('');
+  const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <View>
@@ -37,14 +39,20 @@ const Login = ( )=>{
         color="#bebebe"
         onPress={
           ()=>requestLogin(user, password).then(data=>{
-            console.log(data)
-            navigation.navigate('Home');
+            !(data) ? navigation.navigate('Home') : setModalVisible(true);
           })
         }
         title="Entrar"></Button>
-    </View>
-  )
-}
+        {console.log(modalVisible)}
+          {
+            useEffect(()=>{
+              return(
+                <AlertLogin isVisible={true}></AlertLogin>
+              )
+            }, [modalVisible])
+          }
+      </View>
+    )}
 
 const loginStyles = StyleSheet.create({
   input: {
@@ -53,6 +61,50 @@ const loginStyles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
   },
+});
+
+const styles = StyleSheet.create({
+  centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 22
+  },
+  modalView: {
+    margin: 20,
+    backgroundColor: "white",
+    borderRadius: 20,
+    padding: 35,
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5
+  },
+  button: {
+    borderRadius: 20,
+    padding: 10,
+    elevation: 2
+  },
+  buttonOpen: {
+    backgroundColor: "#F194FF",
+  },
+  buttonClose: {
+    backgroundColor: "#2196F3",
+  },
+  textStyle: {
+    color: "white",
+    fontWeight: "bold",
+    textAlign: "center"
+  },
+  modalText: {
+    marginBottom: 15,
+    textAlign: "center"
+  }
 });
 
 export default Login;
