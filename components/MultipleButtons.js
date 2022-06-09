@@ -1,17 +1,16 @@
 import React from "react";
 import { View, Pressable, Text, StyleSheet} from "react-native";
-
+import { useNavigation } from '@react-navigation/native';
 
 
 const MultipleButtons =({buttonsData})=>{
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <View style={styles.column}>
         {
           buttonsData.map(({id, name, page})=>{
-            return(<Pressable style={styles.buttonAlign} key={id} onPress={()=>{
-              console.log("boton presionado para page-> " + page)
-            }}>
+            return(<Pressable style={styles.buttonAlign} key={id} onPress={()=> {navigation.navigate(page)}}>
               <Text>{name}</Text>
             </Pressable>)
           })

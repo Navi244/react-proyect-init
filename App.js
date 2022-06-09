@@ -4,8 +4,13 @@ import Routes from './pages/Routes';
 import Alarm from './pages/Alarm';
 import Light from './pages/Light';
 import Statistics from './pages/Statistics';
+import PersonalStatistics from './pages/StatisticsPersonal';
+import FriendsStatistics from './pages/StatisticsFriends';
 import Friends from './pages/Friends';
 import Training from './pages/Training';
+import BeginnerTraining from './pages/TrainingBeginner';
+import IntermediateTraining from './pages/TrainingIntermediate';
+import AdvancedTraining from './pages/TrainingAdvanced';
 import MainHeader from './components/MainHeader';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -66,6 +71,22 @@ export default function App() {
             fontWeight: 'bold'
           }
         }}/>
+        <Stack.Screen name="PersonalStatistics" component={PersonalStatistics} options={{
+          headerTitle:()=> <MainHeader title="Estadísticas personales" />,
+          headerStyle: {backgroundColor: '#f4511e'},
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold'
+          }
+        }}/>
+        <Stack.Screen name="FriendsStatistics" component={FriendsStatistics} options= {{
+          headerTitle:()=> <MainHeader title="Estadísticas de amigos" />,
+          headerStyle: {backgroundColor: '#f4511e'},
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold'
+          }
+        }}/>
         <Stack.Screen name="Friends" component={Friends} options={{
           headerTitle:()=> <MainHeader title="Amigos" />,
           headerStyle: {backgroundColor: '#f4511e'},
@@ -76,6 +97,30 @@ export default function App() {
         }}/>
         <Stack.Screen name="Training" component={Training} options={{
           headerTitle:()=> <MainHeader title="Entrenamiento" />,
+          headerStyle: {backgroundColor: '#f4511e'},
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold'
+          }
+        }}/>
+        <Stack.Screen name="BeginnerTraining" component={BeginnerTraining} options={{
+          headerTitle:()=> <MainHeader title="Entrenamiento nivel principiantes" />,
+          headerStyle: {backgroundColor: '#f4511e'},
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold'
+          }
+        }}/>
+        <Stack.Screen name="IntermediateTraining" component={IntermediateTraining} options={{
+          headerTitle:()=> <MainHeader title="Entrenamiento nivel intermedio" />,
+          headerStyle: {backgroundColor: '#f4511e'},
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold'
+          }
+        }}/>
+        <Stack.Screen name="AdvancedTraining" component={AdvancedTraining} options={{
+          headerTitle:()=> <MainHeader title="Entrenamiento nivel avanzado" />,
           headerStyle: {backgroundColor: '#f4511e'},
           headerTintColor: '#fff',
           headerTitleStyle: {

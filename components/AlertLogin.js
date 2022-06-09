@@ -6,7 +6,6 @@ const AlertLogin = ({ isVisible })=>{
   const [modalVisible, setModalVisible] = React.useState(false);
   debugger;
   if(isVisible === true){
-    debugger;
     ()=>setModalVisible(isVisible)
   }
   return (
