@@ -3,13 +3,13 @@ import { Modal, View, Text, Pressable, StyleSheet } from "react-native";
 
 
 const AlertLogin = ({ isVisible })=>{
-  console.log(isVisible)
   const [modalVisible, setModalVisible] = React.useState(false);
-
-  ()=>setModalVisible(isVisible)
-  console.log(isVisible)
+  debugger;
+  if(isVisible === true){
+    debugger;
+    ()=>setModalVisible(isVisible)
+  }
   return (
-
       <Modal
         animationType="slide"
         transparent={true}
@@ -25,7 +25,6 @@ const AlertLogin = ({ isVisible })=>{
             </View>
           </View>
       </Modal>
-
   )
 }
 

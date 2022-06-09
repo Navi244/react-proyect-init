@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import reactDom from "react-dom";
 import { View, TextInput, StyleSheet, Button, Modal, Pressable, Text } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import { loginRequest } from "../request/services";
@@ -14,11 +15,14 @@ async function requestLogin(user, password){
   }
 }
 
+const renderModal = ()=>{
+  return(<AlertLogin isVisible={true}></AlertLogin>)
+}
 
 const Login = ( )=>{
   const navigation = useNavigation();
-  const [user, useUser] = useState('');
-  const [password, usePassword] = useState('');
+  const [user, setUser] = useState('');
+  const [password, setPassword] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
@@ -26,12 +30,12 @@ const Login = ( )=>{
       <TextInput 
         style={loginStyles.input}
         value={user}
-        onChangeText={useUser}
+        onChangeText={setUser}
         placeholder="Usuario" />
       <TextInput
         style={loginStyles.input}
         value={password}
-        onChangeText={usePassword}
+        onChangeText={setPassword}
         placeholder="Password"
         secureTextEntry={true}
       />
@@ -39,19 +43,22 @@ const Login = ( )=>{
         color="#bebebe"
         onPress={
           ()=>requestLogin(user, password).then(data=>{
-            !(data) ? navigation.navigate('Home') : setModalVisible(true);
+            (!data === 200) ? setModalVisible(true) : navigation.navigate('Home');
           })
         }
-        title="Entrar"></Button>
-        {console.log(modalVisible)}
+        title="Entrar">
+      </Button>
           {
-            useEffect(()=>{
-              return(
-                <AlertLogin isVisible={true}></AlertLogin>
-              )
-            }, [modalVisible])
+            useEffect(()=>{{
+              if(modalVisible === true){
+                //!-----------------------------
+                //!como renderizar el AlertLogin
+                //!-----------------------------
+                return(<AlertLogin isVisible={modalVisible}></AlertLogin>)
+              }
+            } }, [modalVisible])
           }
-      </View>
+    </View>
     )}
 
 const loginStyles = StyleSheet.create({

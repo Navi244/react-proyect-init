@@ -22,6 +22,7 @@ const loginRequest =(user, password, endpoint)=>{
       return data
     })
     .catch(()=>{
+      reject()
       return error
     })
   });

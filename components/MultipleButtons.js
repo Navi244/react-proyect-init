@@ -1,42 +1,22 @@
 import React from "react";
 import { View, Pressable, Text, StyleSheet} from "react-native";
 
-function firstButton(){
-  console.log('Primer boton seleccionado')
-}
 
-function secondButton(){
-  console.log('Segundo boton seleccionado')
-}
 
-function thirdButton(){
-  console.log("Tercer botón seleccionado")
-}
-
-const MultipleButtons = ()=>{
+const MultipleButtons =({buttonsData})=>{
   return (
     <View style={styles.container}>
       <View style={styles.column}>
-        <View styles={styles.firstButtonText}>
-          <Pressable onPress={()=>firstButton()}>
-            <Text>Principiante</Text>
-          </Pressable>
-        </View>
-      </View>
-      <View style={styles.column}>
-        <View styles={styles.secondButtonText}>
-          <Pressable onPress={()=>secondButton()}>
-            <Text>Intermedio</Text>
-          </Pressable>
-        </View>
-      </View>
-      <View style={styles.column}>
-        <View styles={styles.thirdButtonText}>
-          <Pressable onPress={()=>thirdButton()}>
-            <Text>Avanzado</Text>
-          </Pressable>
-        </View>
-      </View>
+        {
+          buttonsData.map(({id, name, page})=>{
+            return(<Pressable style={styles.buttonAlign} key={id} onPress={()=>{
+              console.log("boton presionado para page-> " + page)
+            }}>
+              <Text>{name}</Text>
+            </Pressable>)
+          })
+        }
+      </View> 
     </View>
   )
 }
@@ -70,6 +50,9 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     position: 'absolute',
     top: '3rem'
+  },
+  buttonAlign: {
+    paddingBottom: "1rem"
   }
 })
 
