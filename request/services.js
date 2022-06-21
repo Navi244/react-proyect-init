@@ -18,7 +18,7 @@ const loginRequest =(user, password, endpoint)=>{
   return new Promise((resolve,reject)=>{
     axios.get(config.host + endpoint)
     .then((data)=>{
-      resolve(data.status);
+      resolve(data.data);
       return data
     })
     .catch(()=>{

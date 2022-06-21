@@ -9,6 +9,7 @@ async function requestLogin(user, password){
   const endpoint = '/login'
   try {
     const response = await loginRequest(user, password, endpoint);
+    console.log(response);
     return response;
   }catch(err){
     console.log(err)
