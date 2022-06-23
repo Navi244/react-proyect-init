@@ -10,7 +10,6 @@ const MainHeader = ({title})=>{
 };
 
 const headerStyles = StyleSheet.create({
-  container: {display: 'static' }
 });
 
 const headerTitle = StyleSheet.create({

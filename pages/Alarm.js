@@ -49,8 +49,7 @@ const container = StyleSheet.create({
   buttonContainer: {
     alignSelf: "center",
     position: "absolute",
-    backgroundColor: "red",
-    borderRadius: "50%"
+    backgroundColor: "red"
   },
   buttonText: {
     paddingLeft: "1rem",

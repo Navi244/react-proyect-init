@@ -31,10 +31,10 @@ const styles = StyleSheet.create({
   column: {
     flexGrow: 1,
     textAlign: 'center',
-    padding: '0.5rem',
-    margin: '0.5rem',
+    padding: 8,
+    margin: 8,
     backgroundColor: 'red',
-    borderRadius: '5%'
+    borderRadius: 5
   },
   firstButtonText: {
     alignSelf: 'center',

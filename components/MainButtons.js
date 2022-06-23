@@ -115,7 +115,7 @@ const homeButtons = StyleSheet.create({
     flexGrow: 1,
     flexWrap: 'wrap',
     maxWidth: '50%',
-    padding: '0.5rem',
+    padding: 8,
   }
 })
 

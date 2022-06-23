@@ -1,4 +1,4 @@
-import Login from './pages/login';
+import Login from './pages/Login';
 import HomeCycling from './pages/HomeCycling';
 import Routes from './pages/Routes';
 import Alarm from './pages/Alarm';
